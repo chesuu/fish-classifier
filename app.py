@@ -251,7 +251,8 @@ with gr.Blocks(title="Fish Classifier", **page_args) as demo:
 
 if __name__ == "__main__":
     demo.launch(
+        server_name="0.0.0.0",
+        server_port=int(os.environ.get("PORT", 10000)),
         css=CSS,
-        theme=THEME,
-        share=True
+        theme=THEME
     )
